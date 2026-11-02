@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f5f8f7" />
+  <title>DermaCare — Your skin, understood</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#"><span class="brand-mark">✳</span><span>derma<span class="brand-light">care</span></span></a>
+      <div class="side-label">WORKSPACE</div>
+      <nav class="nav">
+        <a class="nav-item active" href="#overview"><span>⌂</span> Overview</a>
+        <a class="nav-item" href="#appointments"><span>▦</span> Appointments</a>
+        <a class="nav-item" href="#skin-check"><span>◉</span> Skin check</a>
+        <a class="nav-item" href="#community"><span>◎</span> Community <i class="new-dot"></i></a>
+        <a class="nav-item" href="#messages"><span>✉</span> Messages <b class="count">2</b></a>
+      </nav>
+      <div class="side-label tools-label">PERSONAL</div>
+      <nav class="nav">
+        <a class="nav-item" href="#care-plan"><span>♡</span> My care plan</a>
+        <a class="nav-item" href="#settings"><span>⚙</span> Settings</a>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="help-card"><div class="help-icon">?</div><strong>Need a hand?</strong><p>Our care team is here to help you.</p><a href="#messages">Contact support ↗</a></div>
+        <div class="profile-mini"><div class="avatar avatar-small">DL</div><div><strong>Диас Лесбек</strong><small>Patient account</small></div><button aria-label="Profile options">···</button></div>
+      </div>
+    </aside>
+
+    <main class="main" id="overview">
+      <header class="topbar">
+        <div class="mobile-brand"><span class="brand-mark">✳</span> dermacare</div>
+        <div class="breadcrumb">Workspace <span>/</span> <strong>Overview</strong></div>
+        <div class="top-actions"><button class="icon-btn" aria-label="Notifications">♧<i></i></button><div class="avatar">DL</div></div>
+      </header>
+
+      <section class="welcome-row">
+        <div><p class="eyebrow">MONDAY, NOVEMBER 2, 2026</p><h1>Your skin, <em>understood.</em></h1><p class="subhead">A clearer path to healthy skin starts here.</p></div>
+        <button class="primary-btn" onclick="document.querySelector('#appointments').scrollIntoView({behavior:'smooth'})"><span>＋</span> Book appointment</button>
+      </section>
+
+      <section class="hero-card">
+        <div class="hero-copy"><span class="pill pill-light">YOUR PERSONAL SKIN SPACE</span><h2>Small steps.<br><em>Healthier skin.</em></h2><p>Connect with dermatology professionals, keep track of your skin journey, and find a community that understands.</p><a href="#skin-check" class="hero-link">Explore skin check <span>↗</span></a></div>
+        <div class="hero-art" aria-hidden="true"><div class="sun"></div><div class="plant plant-one"></div><div class="plant plant-two"></div><div class="face-shape"><div class="face-eye"></div><div class="face-nose"></div><div class="face-mouth"></div><div class="face-cheek"></div></div><div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div><div class="art-caption">care looks good on you</div></div>
+      </section>
+
+      <section class="stats-grid">
+        <article class="stat-card"><div class="stat-top"><span class="stat-icon mint">♡</span><span class="trend">+1 this month</span></div><strong>04</strong><p>Care activities</p><small>Keep building your routine</small></article>
+        <article class="stat-card"><div class="stat-top"><span class="stat-icon peach">▦</span><span class="status">Upcoming</span></div><strong>01</strong><p>Appointments</p><small>Your next visit is scheduled</small></article>
+        <article class="stat-card"><div class="stat-top"><span class="stat-icon lilac">✧</span><span class="trend">New articles</span></div><strong>08</strong><p>Saved resources</p><small>Helpful reads for your skin</small></article>
+      </section>
+
+      <div class="content-grid">
+        <section class="panel appointments" id="appointments">
+          <div class="section-heading"><div><p class="eyebrow">STAY ON TRACK</p><h3>Upcoming appointment</h3></div><a href="#appointments">View all ↗</a></div>
+          <div class="appointment-row"><div class="doctor-photo">AM</div><div class="doctor-info"><strong>Dr. Amina Mukhtar</strong><span>Dermatologist · Skin health</span><small><span>◷</span> Thursday, Nov 12 · 10:30 AM</small></div><span class="appointment-tag">Confirmed</span></div>
+          <div class="appointment-bottom"><span>Consultation · 30 minutes</span><button class="text-btn" onclick="showToast('Appointment details opened (demo).')">View details <span>→</span></button></div>
+        </section>
+
+        <section class="panel routine" id="care-plan">
+          <div class="section-heading"><div><p class="eyebrow">DAILY WELLNESS</p><h3>Your care routine</h3></div><span class="progress-label">2 of 3 done</span></div>
+          <div class="progress-track"><span></span></div>
+          <label class="routine-item done"><input type="checkbox" checked><span class="checkmark">✓</span><span><strong>Gentle morning cleanse</strong><small>AM · Daily</small></span><b>Done</b></label>
+          <label class="routine-item done"><input type="checkbox" checked><span class="checkmark">✓</span><span><strong>Apply moisturizer</strong><small>AM · Daily</small></span><b>Done</b></label>
+          <label class="routine-item"><input type="checkbox"><span class="checkmark"></span><span><strong>Apply SPF 30+</strong><small>AM · Daily</small></span><b>To do</b></label>
+        </section>
+      </div>
+
+      <section class="lower-grid">
+        <section class="panel skin-panel" id="skin-check">
+          <div class="section-heading"><div><p class="eyebrow">GET TO KNOW YOUR SKIN</p><h3>Skin check-in</h3></div><span class="soft-icon">◉</span></div>
+          <p class="panel-desc">Take a moment to note how your skin feels today. Your notes can help you prepare for a conversation with a dermatologist.</p>
+          <div class="mood-options"><button onclick="selectMood(this)">😊<span>Good</span></button><button onclick="selectMood(this)">😐<span>Okay</span></button><button onclick="selectMood(this)">☹️<span>Concerned</span></button></div>
+          <textarea id="skinNote" placeholder="Add a note about your skin today..."></textarea>
+          <button class="primary-btn small-btn" onclick="saveCheckin()">Save check-in <span>→</span></button>
+          <p class="saved-note" id="savedNote" aria-live="polite"></p>
+        </section>
+        <section class="panel community-panel" id="community">
+          <div class="section-heading"><div><p class="eyebrow">YOU'RE NOT ALONE</p><h3>Community stories</h3></div><a href="#community">Explore all ↗</a></div>
+          <article class="community-post"><div class="post-avatar lavender">SK</div><div><strong>Sarah K. <span>· 2 days ago</span></strong><p>Learning to be patient with my skin journey has made such a difference. One day at a time. 🌿</p><div class="post-meta">♡ 24 likes <span>•</span> 8 comments</div></div></article>
+          <article class="community-post"><div class="post-avatar yellow">MR</div><div><strong>Michael R. <span>· 4 days ago</span></strong><p>What questions do you usually ask at your first dermatologist visit?</p><div class="post-meta">♡ 16 likes <span>•</span> 12 comments</div></div></article>
+          <button class="outline-btn" onclick="showToast('Community feed is a demo feature.')">Visit community <span>→</span></button>
+        </section>
+      </section>
+
+      <footer><span>© 2026 DermaCare · AppStorm project</span><span>Made with care by <strong>Диас Лесбек</strong></span><a href="#overview">Back to top ↑</a></footer>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>
